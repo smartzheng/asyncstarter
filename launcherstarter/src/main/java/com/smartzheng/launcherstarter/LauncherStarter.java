@@ -54,7 +54,7 @@ public class LauncherStarter {
     /**
      * 注意：每次获取的都是新对象
      *
-     * @return
+
      */
     public static LauncherStarter createInstance() {
         if (!sHasInit) {

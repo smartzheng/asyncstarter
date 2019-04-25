@@ -2,8 +2,8 @@ package com.smartzheng.launcherstarter;
 
 import android.os.Looper;
 import android.os.MessageQueue;
-import com.uoko.library.launchstarter.task.DispatchRunnable;
-import com.uoko.library.launchstarter.task.Task;
+import com.smartzheng.launcherstarter.task.DispatchRunnable;
+import com.smartzheng.launcherstarter.task.Task;
 
 import java.util.LinkedList;
 import java.util.Queue;

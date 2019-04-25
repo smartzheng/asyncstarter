@@ -41,7 +41,6 @@ public abstract class Task implements ITask {
      * 是否需要尽快执行，解决特殊场景的问题：一个Task耗时非常多但是优先级却一般，很有可能开始的时间较晚，
      * 导致最后只是在等它，这种可以早开始。
      *
-     * @return
      */
     public boolean needRunAsSoon() {
         return false;
@@ -50,7 +49,6 @@ public abstract class Task implements ITask {
     /**
      * Task的优先级，运行在主线程则不要去改优先级
      *
-     * @return
      */
     @Override
     public int priority() {
@@ -61,7 +59,6 @@ public abstract class Task implements ITask {
      * Task执行在哪个线程池，默认在IO的线程池；
      * CPU 密集型的一定要切换到DispatcherExecutor.getCPUExecutor();
      *
-     * @return
      */
     @Override
     public ExecutorService runOn() {
@@ -71,7 +68,6 @@ public abstract class Task implements ITask {
     /**
      * 异步线程执行的Task是否需要在被调用await的时候等待，默认不需要
      *
-     * @return
      */
     @Override
     public boolean needWait() {
@@ -81,7 +77,6 @@ public abstract class Task implements ITask {
     /**
      * 当前Task依赖的Task集合（需要等待被依赖的Task执行完毕才能执行自己），默认没有依赖
      *
-     * @return
      */
     @Override
     public List<Class<? extends Task>> dependsOn() {
@@ -109,7 +104,6 @@ public abstract class Task implements ITask {
     /**
      * 是否只在主进程，默认是
      *
-     * @return
      */
     @Override
     public boolean onlyInMainProcess() {

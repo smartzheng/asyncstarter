@@ -18,7 +18,7 @@ public class TaskSortUtil {
     /**
      * 任务的有向无环图的拓扑排序
      *
-     * @return
+
      */
     public static synchronized List<Task> getSortResult(List<Task> originTasks,
                                                         List<Class<? extends Task>> clsLaunchTasks) {
@@ -77,9 +77,6 @@ public class TaskSortUtil {
     }
 
     private static void printAllTaskName(List<Task> newTasksAll) {
-        if (true) {
-            return;
-        }
         for (Task task : newTasksAll) {
             DispatcherLog.i(task.getClass().getSimpleName());
         }
@@ -94,7 +91,7 @@ public class TaskSortUtil {
      *
      * @param originTasks
      * @param
-     * @return
+
      */
     private static int getIndexOfTask(List<Task> originTasks,
                                       List<Class<? extends Task>> clsLaunchTasks, Class cls) {

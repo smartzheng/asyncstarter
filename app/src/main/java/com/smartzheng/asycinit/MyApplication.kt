@@ -14,14 +14,22 @@ class MyApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         LauncherStarter.init(this)
-        LauncherStarter.createInstance()
-            .run {
-                addTask(InitTask1())
-                    .addTask(InitTask2())
-                    .addTask(InitTask3())
-                    //addTask()...
-                    .start()
-                await()
-            }
+        val starter = LauncherStarter.createInstance()
+
+        starter.addTask(InitTask1())
+            .addTask(InitTask2())
+            .addTask(InitTask3())
+            //addTask()...
+        starter.start()
+        starter.await()
+        //LauncherStarter.createInstance()
+        //            .run {
+        //                addTask(InitTask1())
+        //                    .addTask(InitTask2())
+        //                    .addTask(InitTask3())
+        //                    //addTask()...
+        //                    .start()
+        //                await()
+        //            }
     }
 }
