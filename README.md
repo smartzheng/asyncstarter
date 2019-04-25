@@ -1,4 +1,4 @@
-# launcherstarter
+# asycstarter
 Android异步初始化工具
 
 1.添加仓库
