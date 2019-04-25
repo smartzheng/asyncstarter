@@ -12,7 +12,7 @@ Android异步初始化工具
 2. 添加依赖
 
 	dependencies {
-	        implementation 'com.github.smartzheng:launcherstarter:1.0.0'
+	        implementation 'com.github.smartzheng:launcherstarter:1.0.1'
 	}
   
   
