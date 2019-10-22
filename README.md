@@ -1,5 +1,5 @@
 # asycstarter
-Android异步初始化工具
+Android异步初始化工具，更多内容请见博客：https://www.jianshu.com/p/ae0884e83c55
 
 1.添加仓库
 ```
