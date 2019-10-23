@@ -1,23 +1,24 @@
 # asycstarter
-Android异步初始化工具
+Android异步初始化工具，更多内容请见博客：https://www.jianshu.com/p/ae0884e83c55
 
 1.添加仓库
-
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
+```
+allprojects {
+    repositories {
+	...
+	maven { url 'https://jitpack.io' }
+    }
+}
+```
 2. 添加依赖
-
-	dependencies {
-	        implementation 'com.github.smartzheng:launcherstarter:1.0.1'
-	}
-  
-  
+```
+dependencies {
+    implementation 'com.github.smartzheng:launcherstarter:1.0.1'
+}
+```
 3.自定义Task
 
+```
 class InitTask : Task() {
     override fun needWait(): Boolean {//是否需要在阻塞在await(),在Application的onCreate方法之前执行完
         return true
@@ -36,10 +37,11 @@ class InitTask : Task() {
         //初始化
     }
 }
-
+```
 
 4.在Application中
 
+```
 class MyApplication : Application() {
     override fun onCreate() {
         super.onCreate()
@@ -63,8 +65,7 @@ class MyApplication : Application() {
         //            }
     }
 }
-
-
+```
 
 
 
