@@ -13,7 +13,7 @@ allprojects {
 2. 添加依赖
 ```
 dependencies {
-    implementation 'com.github.smartzheng:launcherstarter:1.0.1'
+    implementation 'com.github.smartzheng:launcherstarter:1.0.2'
 }
 ```
 3.自定义Task
