@@ -12,7 +12,7 @@ class InitTask1 : Task() {
     }
 
     override fun dependsOn(): MutableList<Class<out Task>> {//等待另一个Task执行完再执行此任务初始化
-        return mutableListOf(InitTask1::class.java)
+        return mutableListOf(InitTask2::class.java)
     }
 
     override fun run() {
